@@ -9,10 +9,14 @@ const auth = (req, res, next) => {
         if (validate) {
             next();
         }
-        return res.send({ msg: "user not authorized" });
+        else {
+            console.log("User not Authorized!");
+        }
+        // return res.send({ msg: "user not authorized" });
     }
     else {
-        return res.send({ msg: "user not allowed" })
+        // return res.send({ msg: "user not allowed" })
+        console.log("User not Authorized");
     }
 }
 
