@@ -2,7 +2,6 @@ const express = require("express");
 const userrouter = require("./Router/userrouter");
 const app = express();
 const cors = require("cors");
-const auth = require("./middleware/auth");
 // const jwt = require("jsonwebtoken");
 // const secret_key = "suraj";
 
@@ -17,7 +16,7 @@ app.use(cors({
 
 app.use(express.json()); //---->used as a body parser - inbuild in express
 
-app.get("/", auth, (req, res) => {
+app.get("/", (req, res) => {
     res.send("This is home page");
     console.log("Home page");
 })

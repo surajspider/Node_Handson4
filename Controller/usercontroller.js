@@ -67,4 +67,4 @@ const logfun = (req, res) => {
 };
 
 
-module.exports = { regfun, logfun };
+module.exports = { regfun, logfun, secret_key };

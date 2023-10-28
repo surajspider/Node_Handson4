@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken")
-const secret_key = "suraj";
+const jwt = require("jsonwebtoken");
+const { secret_key } = require("../Controller/usercontroller");
 const auth = (req, res, next) => {
     const BearerToken = req.headers["authorization"];
     // console.log(BearerToken)
