@@ -3,7 +3,7 @@ const auth = require("../middleware/auth");
 
 const userrouter = require("express").Router();
 
-userrouter.post("/", auth, (req, res) => {
+userrouter.get("/", auth, (req, res) => {
     console.log("homepage api")
     res.send("api home page");
 })
