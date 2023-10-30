@@ -3,11 +3,11 @@ const auth = require("../middleware/auth");
 
 const userrouter = require("express").Router();
 
+userrouter.post("/register", regfun);
+userrouter.post("/login", logfun);
+
 userrouter.get("/", auth, (req, res) => {
     console.log("homepage api")
     res.send("api home page");
 })
-userrouter.post("/register", regfun);
-userrouter.post("/login", logfun);
-
 module.exports = userrouter;
